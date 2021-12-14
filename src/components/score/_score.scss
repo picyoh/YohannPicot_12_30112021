@@ -1,0 +1,37 @@
+.score {
+    position: relative;
+    height: fit-content;
+    background-color: $lightgrey;
+    
+    h3 {
+        position: absolute;
+        top: 1%;
+        left: 6%;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .scoreLabel {
+        position: absolute;
+        top: 37%;
+        left: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        p{
+            margin: 0;
+            &:first-child{
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+    
+            &:last-child {
+                max-width: 50%;
+                font-size: 0.8rem;
+                
+            }
+        }
+
+    }
+}

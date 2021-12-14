@@ -1,0 +1,36 @@
+header {
+  max-width: 100%;
+  padding: 2%;
+  
+  flex: 100%;
+  display: flex;
+  
+  background-color: black;
+
+  .logo {
+    flex: 20%;
+    align-self: center;
+
+    img {
+      height: 6vh;
+    }
+  }
+
+  h1 {
+    display: none;
+  }
+
+  nav {
+    flex: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}

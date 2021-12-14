@@ -1,0 +1,31 @@
+.charts {
+    padding: 0 7% 2% 7%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3%;
+    
+    &__left {
+        flex: 56%;
+        display: flex;
+        flex-flow: row wrap;
+
+        &__up {
+            flex: 100%;
+        }
+    
+        &__down {
+            flex: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            gap: 2%;
+        }
+    }
+
+    &__right {
+        flex: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,37 @@
+.average-sessions {
+    position: relative;
+    height: fit-content;
+    background-color: $primary;
+    
+    h3{
+        position: absolute;
+        top:10%;
+        left: 10%;
+        max-width: 70%;
+        margin: 0;
+        color: $alphawhite;
+        font-size: 0.8rem;
+        font-weight: 400;
+        z-index: 1;
+
+    }
+
+    
+}
+
+.toolContainer {
+    background-color: white;
+    
+    p{
+        padding: 0.3rem 0.2rem;
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+}
+
+
+.customBackground {
+    rect {
+        position: absolute;
+    }
+}
