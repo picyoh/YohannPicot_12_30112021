@@ -7,7 +7,7 @@ const CustomTick = (props) => {
 
     return (
         <g transform={`translate(${x},${y + 25})`}>
-            <text x={0} y={0} fill="white" fontSize={'0.6rem'} fontWeight={500} opacity={0.7}>
+            <text x={-4} y={0} fill="white" fontSize={'0.6rem'} fontWeight={500} opacity={0.7}>
                 {days[payload.value]}
             </text>
         </g>

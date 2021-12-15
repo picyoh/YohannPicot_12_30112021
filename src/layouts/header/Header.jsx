@@ -9,7 +9,7 @@ function Header() {
             </div>
             <h1>SportSee</h1>
             <nav>
-                <Link to='/' >Acceuil</Link>
+                <Link to='/' >Accueil</Link>
                 <Link to='user/:userId' >Profil</Link>
                 <Link to='settings' >Réglage</Link>
                 <Link to='community' >Communauté</Link>

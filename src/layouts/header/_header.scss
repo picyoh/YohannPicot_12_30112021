@@ -6,6 +6,7 @@ header {
   display: flex;
   
   background-color: black;
+  box-shadow: 1px 2px 6px $grey;
 
   .logo {
     flex: 20%;

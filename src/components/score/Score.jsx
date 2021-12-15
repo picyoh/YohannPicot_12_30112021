@@ -61,7 +61,8 @@ function Score(props) {
             </PieChart>
             <div className='scoreLabel'>
                 <p>{ score[0].score + "%" }</p>
-                <p>de votre objectif</p>
+                <p>de votre</p>
+                <p>objectif</p>
                 </div>
         </div>
     )
