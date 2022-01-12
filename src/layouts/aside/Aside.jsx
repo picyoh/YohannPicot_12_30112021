@@ -1,21 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-function Aside(){
-    return(
+function Aside() {
+
+    const location = useLocation().pathname;
+    const id = location.replace(/[^0-9]/g, "");
+    const [userPath, setUserPath] = useState();
+
+    useEffect(() => {
+        setUserPath("user/" + id);
+    }, [id])
+
+    return (
         <aside>
             <div className="sideNav">
-                <Link to='user/:userId'>
-                    <img src='../img/meditate.png' alt='meditate' />
+                <Link to={`${userPath}/activity`}>
+                    <img src='/img/meditate.png' alt='activity' />
                 </Link>
-                <Link to='user/:userId'>
-                    <img src='../img/swimming.png' alt='swimming' />
+                <Link to={`${userPath}/average-sessions`}>
+                    <img src='/img/swimming.png' alt='average-sessions' />
                 </Link>
-                <Link to='user/:userId'>
-                    <img src='../img/cycling.png' alt='cycling' />
+                <Link to={`${userPath}/performance`}>
+                    <img src='/img/cycling.png' alt='performances' />
                 </Link>
-                <Link to='user/:userId'>
-                    <img src='../img/fitness.png' alt='fitness' />
+                <Link to={`${userPath}/score`}>
+                    <img src='/img/fitness.png' alt='score' />
                 </Link>
             </div>
             <p>Copyright, SportSee 2020</p>

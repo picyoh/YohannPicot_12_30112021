@@ -8,9 +8,7 @@ import Performance from './../../components/performance/Performance'
 import Score from './../../components/score/Score'
 import Consumption from './../../components/consumption/Consumption'
 
-function Charts(props) {
-
-    const id = props.id;
+function Charts({id}) {
 
     const [calories, setCalories] = useState();
     const [proteins, setProteins] = useState();
@@ -24,25 +22,23 @@ function Charts(props) {
         setLipids(getMainData(id, 'lipids'));
     }, [id]);
 
-    
-
     return (
         <article className='charts'>
             <div className="charts__left">
             <div className="charts__left__up">
-                <Activity id={ id } />
+                <Activity standAlone={false} />
             </div>
             <div className="charts__left__down">
-                <Average id={ id } />
-                <Performance id={ id } />
-                <Score id={ id } />
+                <Average standAlone={false} />
+                <Performance standAlone={false} />
+                <Score standAlone={false} />
             </div>
             </div>
             <div className='charts__right'>
-                <Consumption data="calories" value={calories} />
-                <Consumption data="proteines" value={proteins} />
-                <Consumption data="glucides" value={glucids} />
-                <Consumption data="lipides" value={lipids} />
+                <Consumption type="calories" value={calories} />
+                <Consumption type="proteines" value={proteins} />
+                <Consumption type="glucides" value={glucids} />
+                <Consumption type="lipides" value={lipids} />
             </div>
         </article>
     )

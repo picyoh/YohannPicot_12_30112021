@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/score/Score.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/score/Score.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import PropTypes from 'prop-types'
+
+import { PieChart, Pie, Cell, Tooltip } from 'recharts'
+
+import { sizeCharts } from '../../services/sizeCharts';
+import { getMainData } from './../../services/dataManager';
+
+/**
+ * Set a pie chart for user daily scores
+ *
+ * @param   {Object}  props   
+ * @param   {Boolean}  props.standAlone  Is component in full page
+ *
+ * @return  {Object}              return Score component
+ */
+function Score(props) {
+    const { standAlone } = props;
+    // Get id from url
+    const params = useParams();
+    const id = parseInt(params.userId);
+    // Get datas
+    const [isLoading, setLoading] = useState(true);
+    const [score, getScore] = useState();
+    // set different colors for pie charts
+    const COLORS = ["#FF0101", "transparent"];
+
+    useEffect(() => {
+        const datas = getMainData(id, 'score');
+        getScore(datas)
+        setLoading(false);
+    }, [id])
+
+    if (isLoading) return &lt;div className="loading">Loading&lt;/div>
+
+    // get dimension from browser
+    const sizes = sizeCharts("average", standAlone);
+    const chartWidth = sizes.chartWidth;
+    const chartHeight = sizes.chartHeight;
+    const componentMargin = sizes.componentMargin;
+    const chartIn = (standAlone) ? (chartWidth / 6) : (chartWidth / 3);
+    const chartOut = chartIn + 11;
+
+    return (
+        &lt;div className='score' style={(standAlone) ? (componentMargin) : null} >
+            &lt;h3>Score&lt;/h3>
+            &lt;PieChart
+                width={chartWidth}
+                height={chartHeight}
+            >
+                &lt;Pie
+                    dataKey="score"
+                    data={score}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={chartIn}
+                    outerRadius={chartOut}
+                    fill="#FF0101"
+                    cornerRadius={100}
+                    stroke='none'
+                    startAngle={90}
+                >
+                    {
+                        (score) ?
+                            (
+                                score.map((entry, index) => (
+                                    &lt;Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                ))
+                            ) : null
+                    }
+                &lt;/Pie>
+                &lt;Pie
+                    dataKey="score"
+                    data={score}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={0}
+                    outerRadius={chartIn}
+                    fill="white"
+                />
+                &lt;Tooltip />
+            &lt;/PieChart>
+            &lt;div className='scoreLabel'>
+                &lt;p>{score[0].score + "%"}&lt;/p>
+                &lt;p>de votre&lt;/p>
+                &lt;p>objectif&lt;/p>
+            &lt;/div>
+        &lt;/div>
+    )
+}
+
+
+Score.propTypes = {
+    standAlone: PropTypes.bool
+};
+
+export default Score</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Activity">Activity</a></li><li><a href="global.html#Average">Average</a></li><li><a href="global.html#Consumption">Consumption</a></li><li><a href="global.html#CustomBackground">CustomBackground</a></li><li><a href="global.html#CustomCursor">CustomCursor</a></li><li><a href="global.html#CustomTick">CustomTick</a></li><li><a href="global.html#CustomTool">CustomTool</a></li><li><a href="global.html#getActivity">getActivity</a></li><li><a href="global.html#getAverageSessions">getAverageSessions</a></li><li><a href="global.html#getMainData">getMainData</a></li><li><a href="global.html#getPerformance">getPerformance</a></li><li><a href="global.html#Performance">Performance</a></li><li><a href="global.html#Score">Score</a></li><li><a href="global.html#setActivity">setActivity</a></li><li><a href="global.html#setAverage">setAverage</a></li><li><a href="global.html#setMainData">setMainData</a></li><li><a href="global.html#setPerformance">setPerformance</a></li><li><a href="global.html#sizeCharts">sizeCharts</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 17:02:42 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

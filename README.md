@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+![Logo SportSee](public/img/logo.svg) 
+# SportSee App
+This repo contains source code of React App for the sports analytics dashboard SportSee.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>SportSee App is a sport sessions reporting application. It synthetise sport activity in few charts.
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `yarn start`
+- [NodeJS (**version 12.18**)](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installing / Getting started
 
-### `yarn test`
+To install project to your computer follow these command lines :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+$ mkdir sportSeeApp 
+$ cd sportSeeApp
+$ git clone https://github.com/your_repo/P9-front-end-dashboard
+$ git clone https://github.com/your_repo/YohannPicot_12_30112021
+$ cd P9-front-end-dashboard && yarn
+$ cd ../YohannPicot_12_30112021 && yarn
+```
 
-### `yarn build`
+the code above will :
+- Make a sportSee App directory
+- Clone your micro-api fork
+- Clone your react-app forks
+- get into micro-api directory & install dependencies
+- get into react-app directory & install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can launch the app from __YohannPicot_12_30112021__ directory with the following command line: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell-session
+$ yarn runBoth
+```
+- The `yarn runBoth` command will allow you to run React App with micro-api running on [http://localhost:3000](http://localhost:3000)  
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.  
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Configuration
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React App can run with mocked datas. To configure it follow this instructions :  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### MockedData ON : 
+#### mockedData 
+Type: `Boolean`  
+Default: `false`  
+Location: `/src/services/dataManager.js` *on line 12* 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```js
+// Mocked data option
+const mockedData = true;
+```
+In this case open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
 
-## Learn More
+- The `yarn start` command will allow you to run React App in developpement mode with mocked Datas.  
+You must set __mockedData__ option to __true__ on [data manager file](../../src/services/dataManager.js) (*/src/services/dataManager.js line 12* ) to run App with mocked datas.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features
 
-### Code Splitting
+This version of SportSee can display :  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Bar chart for user daily activity.
+- Line chart for weekly user average sessions duration.
+- Radar chart for user performances.
+- Pie chart for user daily scores.
+- User consumptions.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Please feel free to contribute to the quality of this content.  
+Any contributions you make to this effort are of course greatly appreciated.
 
-### Making a Progressive Web App
+### Your First Contribution
+- Review a Pull Request
+- Fix an Issue
+- Update the documentation
+- Make a website
+- Write a tutorial
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Here are the differents links and sources of the project:
 
-### Deployment
+- Project homepage: https://openclassrooms.com/fr/paths/314/projects/812/assignment
+- Repository: https://github.com/picyoh/YohannPicot_12_30112021
+- Micro-api repository: https://github.com/your_repo/P9-front-end-dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Issue tracker: https://github.com/picyoh/YohannPicot_12_30112021/issues
+  - In case of sensitive bugs like security vulnerabilities, please contact
+    picyoh@gmail.com.com directly instead of using issue tracker. We value your effort
+    to improve the security and privacy of this project!
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Licensing
+
+The code in this project is licensed under MIT license.
+
+MIT License
+
+*Copyright (c) Facebook, Inc. and its affiliates.*
+
+*Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:*
+
+*The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.*
+
+*THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.*

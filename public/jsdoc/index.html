@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><p><img src="public/img/logo.svg" alt="Logo SportSee"></p>
+<h1>SportSee App</h1>
+<p>This repo contains source code of React App for the sports analytics dashboard SportSee.</p>
+<blockquote>
+<p>SportSee App is a sport sessions reporting application. It synthetise sport activity in few charts.</p>
+</blockquote>
+<h2>Getting started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li><a href="https://nodejs.org/en/">NodeJS (<strong>version 12.18</strong>)</a></li>
+<li><a href="https://yarnpkg.com/">Yarn</a></li>
+</ul>
+<p>If you are working with several versions of NodeJS, we recommend you install <a href="https://github.com/nvm-sh/nvm">nvm</a>. This tool will allow you to easily manage your NodeJS versions.</p>
+<h2>Installing / Getting started</h2>
+<p>To install project to your computer follow these command lines :</p>
+<pre class="prettyprint source lang-bash"><code>$ mkdir sportSeeApp 
+$ cd sportSeeApp
+$ git clone https://github.com/your_repo/P9-front-end-dashboard
+$ git clone https://github.com/your_repo/YohannPicot_12_30112021
+$ cd P9-front-end-dashboard && yarn
+$ cd ../YohannPicot_12_30112021 && yarn
+</code></pre>
+<p>the code above will :</p>
+<ul>
+<li>Make a sportSee App directory</li>
+<li>Clone your micro-api fork</li>
+<li>Clone your react-app forks</li>
+<li>get into micro-api directory &amp; install dependencies</li>
+<li>get into react-app directory &amp; install dependencies</li>
+</ul>
+<h3>Usage</h3>
+<p>You can launch the app from <strong>YohannPicot_12_30112021</strong> directory with the following command line:</p>
+<pre class="prettyprint source lang-shell-session"><code>$ yarn runBoth
+</code></pre>
+<ul>
+<li>The <code>yarn runBoth</code> command will allow you to run React App with micro-api running on <a href="http://localhost:3000">http://localhost:3000</a><br>
+Open <a href="http://localhost:3001">http://localhost:3001</a> to view it in the browser.</li>
+</ul>
+<h2>Configuration</h2>
+<p>React App can run with mocked datas. To configure it follow this instructions :</p>
+<h3>MockedData ON :</h3>
+<h4>mockedData</h4>
+<p>Type: <code>Boolean</code><br>
+Default: <code>false</code><br>
+Location: <code>/src/services/dataManager.js</code> <em>on line 12</em></p>
+<pre class="prettyprint source lang-js"><code>// Mocked data option
+const mockedData = true;
+</code></pre>
+<p>In this case open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+<ul>
+<li>The <code>yarn start</code> command will allow you to run React App in developpement mode with mocked Datas.<br>
+You must set <strong>mockedData</strong> option to <strong>true</strong> on <a href="../../src/services/dataManager.js">data manager file</a> (<em>/src/services/dataManager.js line 12</em> ) to run App with mocked datas.</li>
+</ul>
+<h2>Features</h2>
+<p>This version of SportSee can display :</p>
+<ul>
+<li>Bar chart for user daily activity.</li>
+<li>Line chart for weekly user average sessions duration.</li>
+<li>Radar chart for user performances.</li>
+<li>Pie chart for user daily scores.</li>
+<li>User consumptions.</li>
+</ul>
+<h2>Contributing</h2>
+<p>Please feel free to contribute to the quality of this content.<br>
+Any contributions you make to this effort are of course greatly appreciated.</p>
+<h3>Your First Contribution</h3>
+<ul>
+<li>Review a Pull Request</li>
+<li>Fix an Issue</li>
+<li>Update the documentation</li>
+<li>Make a website</li>
+<li>Write a tutorial</li>
+</ul>
+<h2>Links</h2>
+<p>Here are the differents links and sources of the project:</p>
+<ul>
+<li>
+<p>Project homepage: https://openclassrooms.com/fr/paths/314/projects/812/assignment</p>
+</li>
+<li>
+<p>Repository: https://github.com/picyoh/YohannPicot_12_30112021</p>
+</li>
+<li>
+<p>Micro-api repository: https://github.com/your_repo/P9-front-end-dashboard</p>
+</li>
+<li>
+<p>Issue tracker: https://github.com/picyoh/YohannPicot_12_30112021/issues</p>
+<ul>
+<li>In case of sensitive bugs like security vulnerabilities, please contact
+picyoh@gmail.com.com directly instead of using issue tracker. We value your effort
+to improve the security and privacy of this project!</li>
+</ul>
+</li>
+</ul>
+<h2>Licensing</h2>
+<p>The code in this project is licensed under MIT license.</p>
+<p>MIT License</p>
+<p><em>Copyright (c) Facebook, Inc. and its affiliates.</em></p>
+<p><em>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</em></p>
+<p><em>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</em></p>
+<p><em>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</em></p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Activity">Activity</a></li><li><a href="global.html#Average">Average</a></li><li><a href="global.html#Consumption">Consumption</a></li><li><a href="global.html#CustomBackground">CustomBackground</a></li><li><a href="global.html#CustomCursor">CustomCursor</a></li><li><a href="global.html#CustomTick">CustomTick</a></li><li><a href="global.html#CustomTool">CustomTool</a></li><li><a href="global.html#getActivity">getActivity</a></li><li><a href="global.html#getAverageSessions">getAverageSessions</a></li><li><a href="global.html#getMainData">getMainData</a></li><li><a href="global.html#getPerformance">getPerformance</a></li><li><a href="global.html#Performance">Performance</a></li><li><a href="global.html#Score">Score</a></li><li><a href="global.html#setActivity">setActivity</a></li><li><a href="global.html#setAverage">setAverage</a></li><li><a href="global.html#setMainData">setMainData</a></li><li><a href="global.html#setPerformance">setPerformance</a></li><li><a href="global.html#sizeCharts">sizeCharts</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 17:02:43 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -11,6 +11,7 @@ import Aside from'./layouts/aside/Aside';
 import Activity from './components/activity/Activity';
 import Duration from './components/average/Average';
 import Performance from './components/performance/Performance';
+import Score from './components/score/Score'
 import Error from './components/error/Error';
 
 ReactDOM.render(
@@ -19,12 +20,14 @@ ReactDOM.render(
       <Header />
       <Aside />
       <Routes>
-        <Route path='user/:userId' element={ <Main /> } />
-        <Route path='user/:userId/activity' element={ <Activity /> } />
-        <Route path='user/:userId/average-sessions' element={ <Duration /> } />
-        <Route path='user/:userId/performance' element={ <Performance /> } />
-        <Route path='user/error' element={ <Error /> } />
+        <Route path='user/:userId' element={ <Main standAlone={true} /> } />
+        <Route path='user/:userId/activity' element={ <Activity standAlone={true} /> } />
+        <Route path='user/:userId/average-sessions' element={ <Duration standAlone={true} /> } />
+        <Route path='user/:userId/performance' element={ <Performance standAlone={true} /> } />
+        <Route path='user/:userId/score' element={ <Score standAlone={true} /> } />
+        <Route path='/error' element={ <Error /> } />
         <Route path='/' element={<Navigate to='user/12' />} />
+        {/* <Route path='/*' element={<Navigate to='/error' />} /> */}
       </Routes>
     </Router>
   </React.StrictMode>,

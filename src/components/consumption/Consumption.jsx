@@ -1,17 +1,33 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
+/**
+ * Set Consumptions components
+ *
+ * @param   {Object}  props 
+ * @param   {Boolean}  props.type  Consumption type
+ * @param   {Boolean}  props.value  Consumption value from backend
+ *
+ * @return  {Object}              return Consumption component
+ */
 function Consumption(props) {
-    const imgAddr = "/img/" + props.data + ".svg";
-
+    const {type, value} = props;
+    // Set image adress from type
+    const imgAddr = "/img/" + type + ".svg";
     return (
         <div className="consumption">
-            <img className={props.data} src={imgAddr} alt={props.data} />
+            <img className={type} src={imgAddr} alt={type} />
             <div className="consumptionText">
-                <p> {props.value}{(props.data === 'calories') ? ('kCal') : ('g')} </p>
-                <p className="consumptionType"> {props.data} </p>
+                <p> {value}{(type === 'calories') ? ('kCal') : ('g')} </p>
+                <p className="consumptionType"> {type} </p>
             </div>
         </div>
     )
+}
+
+Consumption.propTypes = {
+    type: PropTypes.string,
+    value: PropTypes.string
 }
 
 export default Consumption

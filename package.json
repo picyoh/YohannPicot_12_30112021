@@ -3,24 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "recharts": "^2.1.6",
-    "sass": "^1.43.5",
-    "web-vitals": "^1.0.1"
+    "sass": "^1.43.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "runBoth" : "concurrently 'react-scripts start' 'node ../backend/app/index'"
+    "runBoth": "concurrently 'node ../backend/app/index' 'PORT=3001 react-scripts start'"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^6.4.0"
+    "concurrently": "^6.5.1",
+    "jsdoc": "^3.6.7"
   }
 }

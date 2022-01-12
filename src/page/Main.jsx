@@ -7,12 +7,12 @@ import Charts from '../layouts/charts/Charts'
 
 function Main(){
   const user = useParams()
-  const userId = parseInt(user.userId);
+  const id = parseInt(user.userId);
 
     return(
         <section className='main'>
-          <Banner id={ userId } />
-          <Charts id={ userId } />
+          <Banner id ={ id } />
+          <Charts id ={ id } />
         </section>
     )
 }
