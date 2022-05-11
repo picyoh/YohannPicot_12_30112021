@@ -36,11 +36,12 @@ function Score(props) {
 
     // get dimension from browser
     const sizes = sizeCharts("average", standAlone);
-    const chartWidth = sizes.chartWidth;
-    const chartHeight = sizes.chartHeight;
+    const chartWidth = Math.round(sizes.chartWidth);
+    const chartHeight = Math.round(sizes.chartHeight);
     const componentMargin = sizes.componentMargin;
-    const chartIn = (standAlone) ? (chartWidth / 6) : (chartWidth / 3);
+    const chartIn = (standAlone) ? (chartWidth / 6) : (chartWidth *0.3);
     const chartOut = chartIn + 11;
+    console.log(chartIn, chartOut)
 
     return (
         <div className='score' style={(standAlone) ? (componentMargin) : null} >
