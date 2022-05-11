@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/YohannPicot_12_30112021/static/css/main.04938c86.css",
-    "main.js": "/YohannPicot_12_30112021/static/js/main.9f4749c7.js",
+    "main.js": "/YohannPicot_12_30112021/static/js/main.ae6f7c70.js",
     "index.html": "/YohannPicot_12_30112021/index.html",
     "main.04938c86.css.map": "/YohannPicot_12_30112021/static/css/main.04938c86.css.map",
-    "main.9f4749c7.js.map": "/YohannPicot_12_30112021/static/js/main.9f4749c7.js.map"
+    "main.ae6f7c70.js.map": "/YohannPicot_12_30112021/static/js/main.ae6f7c70.js.map"
   },
   "entrypoints": [
     "static/css/main.04938c86.css",
-    "static/js/main.9f4749c7.js"
+    "static/js/main.ae6f7c70.js"
   ]
 }
