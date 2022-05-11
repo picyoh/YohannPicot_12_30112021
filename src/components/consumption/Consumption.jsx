@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 function Consumption(props) {
     const {type, value} = props;
     // Set image adress from type
-    const imgAddr = "/img/" + type + ".svg";
+    const imgAddr = process.env.PUBLIC_URL + "/img/" + type + ".svg";
     return (
         <div className="consumption">
             <img className={type} src={imgAddr} alt={type} />

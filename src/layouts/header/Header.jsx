@@ -14,7 +14,7 @@ function Header() {
     return (
         <header>
             <div className="logo">
-                <img src='/img/logo.svg' alt='logo sportsee' />
+                <img src={process.env.PUBLIC_URL + '/img/logo.svg'} alt='logo sportsee' />
             </div>
             <h1>SportSee</h1>
             <nav>

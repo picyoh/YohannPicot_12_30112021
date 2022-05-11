@@ -16,16 +16,16 @@ function Aside() {
         <aside>
             <div className="sideNav">
                 <Link to={`${userPath}/activity`}>
-                    <img src='/img/meditate.png' alt='activity' />
+                    <img src={process.env.PUBLIC_URL + '/img/meditate.png'} alt='activity' />
                 </Link>
                 <Link to={`${userPath}/average-sessions`}>
-                    <img src='/img/swimming.png' alt='average-sessions' />
+                    <img src={process.env.PUBLIC_URL + '/img/swimming.png'} alt='average-sessions' />
                 </Link>
                 <Link to={`${userPath}/performance`}>
-                    <img src='/img/cycling.png' alt='performances' />
+                    <img src={process.env.PUBLIC_URL + '/img/cycling.png'} alt='performances' />
                 </Link>
                 <Link to={`${userPath}/score`}>
-                    <img src='/img/fitness.png' alt='score' />
+                    <img src={process.env.PUBLIC_URL + '/img/fitness.png'} alt='score' />
                 </Link>
             </div>
             <p>Copyright, SportSee 2020</p>
