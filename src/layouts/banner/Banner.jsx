@@ -18,7 +18,7 @@ function Banner({id}) {
             <h2>Bonjour&nbsp;
                 <span>{firstName}</span>
             </h2>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏.</p>
+            <p>Félicitation ! Vous avez explosé vos objectifs hier.👍</p>
         </article>
     );
 }
